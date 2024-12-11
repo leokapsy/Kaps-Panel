@@ -1,14 +1,17 @@
-import React from 'react'
-import { VscDashboard } from "react-icons/vsc";
+import React, { useState } from 'react'
+import { CiMenuFries } from "react-icons/ci";
+import NavBar from './NavBar';
 
 
-const header = () => {
+const Header = () => {
+  const [ showNav, setShowNav] = useState(false)
   return (
     <div className='header'>
-      < VscDashboard/>
-      <h3>Kaps Panel</h3>
+      <CiMenuFries onClick={() => setShowNav(!showNav)}/>
+
+      {showNav &&<NavBar/>}
     </div>
   )
 }
 
-export default header
+export default Header

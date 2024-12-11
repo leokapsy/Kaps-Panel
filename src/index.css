@@ -146,12 +146,21 @@ input, select, textarea{
     margin-bottom: 1rem;
 }
 
-.register, .login, .create-post{
-    width: 30%;
+.register, .login{
+    width: 20%;
     margin-inline: auto;
     height: calc(100vh - 12rem);
     place-items: center;
+    background: #ffffff;
+    padding: 30px 20px;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    
 
+}
+.register, .login:hover{
+    color: rgba(38, 39, 110, 0.2);
 }
 
 .register h2, .login h2, .create-post h2{
@@ -178,16 +187,19 @@ input, select, textarea{
     
     
 }
-.header h3{
+.sidenav h3{
    text-align: center;
    color: #ffff;
-   top:auto;
+   display: flex;
+   padding: 10px 0;
    
    
     
 }
 .header svg{
-   font-size: 30px;
+   font-size: 40px;
+   color: #ffffff;
+   padding:  5px 0 20px;
    
     
 }
@@ -214,7 +226,7 @@ ul li{
 ul li a{
     color: var(--color-white);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     padding: 10px 15px;
     border-radius: 6px;
