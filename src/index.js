@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     errorElement: <Error/>,
     children: [
       {index: true, element: <LogIn />},
-      {index: "dashboard", element: <Dashboard />},
+      {path: "dashboard", element: <Dashboard />},
       {path: "terminal", element: <Terminal/>},
       {path: "register", element: <Register/>},
       {path: "login", element: <LogIn/>},

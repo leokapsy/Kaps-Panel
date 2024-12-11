@@ -167,4 +167,61 @@ input, select, textarea{
 .register small a, .login small a{
     color: var(--color-primary);
 }
+/** Header**/
+.header{
+    padding: 15px 15px;
+    height: 3rem;
+    background: var(--color-primary);
+    display: flex;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    margin: 4px 1px;
+    
+    
+}
+.header h3{
+   text-align: center;
+   color: #ffff;
+   top:auto;
+   
+   
+    
+}
+.header svg{
+   font-size: 30px;
+   
+    
+}
 
+
+/** navbar**/
+
+.sidenav{
+    width: 240px;
+    background: var(--color-primary);
+    position: absolute;
+    height: 95vh;
+    padding: 0 30px;
+    transition: var(--transitions);
+}
+.sidenav ul{
+    padding: 0;
+
+}
+ul li{
+    list-style-type: none;
+    margin: 10px 0 ; 
+}
+ul li a{
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 6px;
+    
+}
+ul li a:hover,
+ul li a.active{
+    background: #f3600b;
+    
+}
