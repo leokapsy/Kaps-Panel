@@ -57,11 +57,11 @@ img{
 }
 
 section{
-    margin-top: 6rem;
+   
 }
 
 .container{
-    width: var(--container-width-Ig);
+    width: 100%;
     margin-inline: auto;
 }
 .btn{
@@ -102,25 +102,42 @@ section{
 
 .center{
     text-align: center;
-    padding-top: 5rem;
+    padding: 12.8rem;
     margin-inline: center;
     display: block;
     width: 100%;
+    background-color: rgba(81, 73, 196, 0.5);
+    
 }
 
-.error_page h2{
+.error_page h1, h2{
     margin: 1rem;
+}
+.error_page h1{
+    font-weight: 100;
+    font-size: 200px;
+    font-style: oblique;
+}
+.error_page h2{
+    outline-style: auto;
+    font-style: oblique;
+   
+    
+   
+    
 }
 
 footer{
-    background: var(--color-gray-dark);
+    background: var(--bg-color);
     margin-top: 6rem;
     padding-top: 2rem;
     text-align: center;
     border-top: 2px solid var(--bg-color);
     padding: 1rem;
-    color:var(--color-white);
+    color:var(--color-secondary);
     font-weight: 300;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    
 }
 
 
@@ -128,13 +145,15 @@ footer{
 .form {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: .6rem;
+    
 }
 input, select, textarea{
     width: 100%;
     padding: 0.6rem 1rem;
     border-radius: var(--radius-2);
     resize: none; 
+    color: #0c0c22;
 }
 
 .errormsg{
@@ -146,19 +165,30 @@ input, select, textarea{
     margin-bottom: 1rem;
 }
 
-.register, .login{
-    width: 20%;
+.register{
+    width: 22%;
     margin-inline: auto;
     height: calc(100vh - 12rem);
     place-items: center;
     background: #ffffff;
-    padding: 30px 20px;
+    padding: 35px 20px;
     height: auto;
     border-radius: 25px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+    gap:2rem 2rem;
+    position: fixed;
+    left: calc(40%);
+    top: 20%;
+
     
 
 }
+
+    
+    
+    
+
+
 .register, .login:hover{
     color: rgba(38, 39, 110, 0.2);
 }
@@ -176,44 +206,54 @@ input, select, textarea{
 .register small a, .login small a{
     color: var(--color-primary);
 }
-/** Header**/
+/** Header && Nav Bar------------------------------------------------------------------------------------**/
+
 .header{
-    padding: 15px 15px;
+    padding: 11px;
     height: 3rem;
-    background: var(--color-primary);
-    display: flex;
+    background-color: rgba(81, 73, 196, 0.5);
+    z-index: 9999;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-    margin: 4px 1px;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    border-top: rem;
+    width: 90%;
+    left: 17%;
     
+ 
     
+  
 }
-.sidenav h3{
+ 
+.sidenav .logo{
    text-align: center;
    color: #ffff;
    display: flex;
-   padding: 10px 0;
+   padding: -20px;
+   border-bottom: 7px solid var(--bg-color);
    
    
     
-}
-.header svg{
-   font-size: 40px;
-   color: #ffffff;
-   padding:  5px 0 20px;
-   
-    
+} .sidenav svg{
+    color: #ffffff;
 }
 
-
-/** navbar**/
 
 .sidenav{
-    width: 240px;
-    background: var(--color-primary);
-    position: absolute;
-    height: 95vh;
-    padding: 0 30px;
+    width: 230px;
+    background-color: rgba(81, 73, 196, 0.5);
+    height: 100vh;
+   
     transition: var(--transitions);
+    backdrop-filter: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    
+    
+}
+.sidenav{
+    position: fixed;
+    padding:  30px;
 }
 .sidenav ul{
     padding: 0;
@@ -224,9 +264,10 @@ ul li{
     margin: 10px 0 ; 
 }
 ul li a{
-    color: var(--color-white);
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 15px;
+    font-weight: 500;
     display: block;
     padding: 10px 15px;
     border-radius: 6px;
@@ -234,6 +275,57 @@ ul li a{
 }
 ul li a:hover,
 ul li a.active{
-    background: #f3600b;
+    color: #ffffff;
+    background: var(--color-secondary);
     
+}
+.signin li{
+    top: 20rem;
+    color: #11020c;
+    background: #860303;
+    position: relative;
+    text-align: center;
+    width: 6rem;
+    border-radius: 10px;
+    
+    
+}
+.signin {
+   display: flex;
+   gap: 0.5rem;
+    
+    
+}
+
+
+/** Dashboard-----------------------------------------------------------------------------------------------**/
+
+.system-cont{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    left: 17%;
+    top: 5rem;
+    
+
+    
+    
+   
+}
+.box{
+    
+    padding: 1rem 2rem ;
+    background: #ffff;
+    height: 12rem;
+    width: 26rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    
+    
+}
+.box .contents{
+    top: 1rem;
+    position: relative;
 }

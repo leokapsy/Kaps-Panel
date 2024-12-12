@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
-import { CiMenuFries } from "react-icons/ci";
+import React from 'react'
+import { MdSpaceDashboard } from "react-icons/md";
+
 import NavBar from './NavBar';
 
 
 const Header = () => {
-  const [ showNav, setShowNav] = useState(false)
+  
   return (
-    <div className='header'>
-      <CiMenuFries onClick={() => setShowNav(!showNav)}/>
-
-      {showNav &&<NavBar/>}
+  <div className="container">
+  <NavBar/>
+    <div className='header'> 
+      <MdSpaceDashboard />     
+       
     </div>
+  </div>
   )
 }
 
