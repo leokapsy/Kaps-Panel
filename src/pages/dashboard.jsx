@@ -27,7 +27,9 @@ const dashboard = () => {
                 <div className="box">
                  <h4>System Info</h4>
                     <div className="contents">
-                        <Gauges/>
+                        <Gauges
+                          color="#ff200"
+                        />
                     </div>
                 </div>
             </div>

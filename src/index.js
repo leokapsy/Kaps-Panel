@@ -10,6 +10,7 @@ import LogIn from './pages/login';
 import Error from './pages/error';
 import Layout from './components/layout';
 import Terminal from './pages/terminal';
+import Email from './pages/emailManagement'
 
 
 const router = createBrowserRouter([
@@ -25,6 +26,8 @@ const router = createBrowserRouter([
       {path: "login", element: <LogIn/>},
       { path: "profile/:id", element: <UserProfile /> },
       {path: "logout", element: <Logout/>},
+      {path: "email", element: <Email/>},
+
 
 
     ]
