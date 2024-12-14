@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Register =() => {
   const [userData, setUserData] = useState({
@@ -15,6 +15,11 @@ const Register =() => {
     })
   }
 
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    navigate("/code"); 
+  };
+
 
 
   return (
@@ -28,7 +33,7 @@ const Register =() => {
         <input type="" placeholder='Email' name='email' value={userData.email} onChange={changeInputHandler} />
         <input type="password" placeholder='Password' name='password' value={userData.password} onChange={changeInputHandler} />
         <input type="password" placeholder='Confirm Password' name='confirm_password' value={userData.confirm_password} onChange={changeInputHandler} />
-        <button type="submit" className='btn primary'>Register</button>
+        <button type="submit" className='btn primary' onClick={handleRegister}>Register</button>
       </form>
       <small>Already have an account? <Link to="/login">Sign In</Link></small>
     </div>

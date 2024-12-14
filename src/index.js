@@ -11,6 +11,10 @@ import Error from './pages/error';
 import Layout from './components/layout';
 import Terminal from './pages/terminal';
 import Email from './pages/emailManagement'
+import Domain from './pages/domain';
+import Monitor from './pages/ServerMonitorring'
+import SSL from './pages/sslCertificate';
+import Code from './pages/code';
 
 
 const router = createBrowserRouter([
@@ -27,6 +31,10 @@ const router = createBrowserRouter([
       { path: "profile/:id", element: <UserProfile /> },
       {path: "logout", element: <Logout/>},
       {path: "email", element: <Email/>},
+      {path: "domains", element: <Domain/>},
+      {path: "monitoring", element: <Monitor/>},
+      {path: "certificate", element: <SSL/>},
+      {path: "code", element: <Code/>},
 
 
 

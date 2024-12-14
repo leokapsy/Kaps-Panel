@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const LogIn =() => {
   const [userData, setUserData] = useState({
     email: '',
     password: '',
   })
+
   const changeInputHandler = (e) => {
     setUserData(prevState => {
       return {...prevState, [e.target.name]: e.target.value}
     })
   }
 
+  const navigate = useNavigate();
+  const handleLogIn = () => {
+    navigate("/Dashboard"); 
+  };
 
 
   return (
@@ -22,7 +28,7 @@ const LogIn =() => {
         <p className="errormsg">error</p>
         <input type="" placeholder='Email' name='email' value={userData.email} onChange={changeInputHandler} />
         <input type="password" placeholder='Password' name='password' value={userData.password} onChange={changeInputHandler} />
-        <button type="submit" className='btn primary'>Register</button>
+        <button type="submit" className='btn primary' onClick={handleLogIn}>Sign In</button>
       </form>
       <small>Don't have an account? <Link to="/register">Sign Up</Link></small>
     </div>
